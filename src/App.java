@@ -11,5 +11,22 @@
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
+        int f=0;
+        int p=0;
+        while(true){
+            System.out.println("What is the test grade?");
+            int number = Integer.valueOf(scanner.nextLine());
+            if(number==-1){
+                break;
+            } else if (number>100|| number<0){
+                System.out.println("invalid. Re-enter value.");
+            } else {
+                if (number>=60){
+                    p++;
+                } else{
+                    f++;
+                }
+            }
+        } System.out.println("There were "+ p+" passing grades and "+f+" failing grades.");
     }
 }
